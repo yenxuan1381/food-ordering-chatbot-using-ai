@@ -1,0 +1,611 @@
+[
+  {
+    "food_id": "1",
+    "stall_name": "Malay",
+    "item_name": "Nasi lemak",
+    "price": "2",
+    "delivery_service": "yes"
+  },
+  {
+    "food_id": "2",
+    "stall_name": "Malay",
+    "item_name": "Nasi goreng kampung",
+    "price": "6",
+    "delivery_service": "yes"
+  },
+  {
+    "food_id": "3",
+    "stall_name": "Malay",
+    "item_name": "Nasi goreng tomyam",
+    "price": "6.5",
+    "delivery_service": "yes"
+  },
+  {
+    "food_id": "4",
+    "stall_name": "Malay",
+    "item_name": "Nasi goreng ikan masin",
+    "price": "6.5",
+    "delivery_service": "yes"
+  },
+  {
+    "food_id": "5",
+    "stall_name": "Malay",
+    "item_name": "Nasi goreng paprik",
+    "price": "7",
+    "delivery_service": "yes"
+  },
+  {
+    "food_id": "6",
+    "stall_name": "Malay",
+    "item_name": "Nasi goreng USA",
+    "price": "7",
+    "delivery_service": "yes"
+  },
+  {
+    "food_id": "7",
+    "stall_name": "Malay",
+    "item_name": "Nasi goreng pattaya",
+    "price": "7",
+    "delivery_service": "yes"
+  },
+  {
+    "food_id": "8",
+    "stall_name": "Malay",
+    "item_name": "Nasi goreng biasa",
+    "price": "5",
+    "delivery_service": "yes"
+  },
+  {
+    "food_id": "9",
+    "stall_name": "Malay",
+    "item_name": "Ikan goreng",
+    "price": "3.5",
+    "delivery_service": "yes"
+  },
+  {
+    "food_id": "10",
+    "stall_name": "Malay",
+    "item_name": "Ayam goreng",
+    "price": "3",
+    "delivery_service": "yes"
+  },
+  {
+    "food_id": "11",
+    "stall_name": "Malay",
+    "item_name": "Satay",
+    "price": "1.2",
+    "delivery_service": "yes"
+  },
+  {
+    "food_id": "12",
+    "stall_name": "Malay",
+    "item_name": "Kuih talam",
+    "price": "0.7",
+    "delivery_service": "no"
+  },
+  {
+    "food_id": "13",
+    "stall_name": "Malay",
+    "item_name": "Kuih koci",
+    "price": "0.4",
+    "delivery_service": "no"
+  },
+  {
+    "food_id": "14",
+    "stall_name": "Mamak",
+    "item_name": "Roti canai",
+    "price": "1.2",
+    "delivery_service": "no"
+  },
+  {
+    "food_id": "15",
+    "stall_name": "Mamak",
+    "item_name": "Roti telur",
+    "price": "2.3",
+    "delivery_service": "no"
+  },
+  {
+    "food_id": "16",
+    "stall_name": "Mamak",
+    "item_name": "Roti cheese",
+    "price": "2.5",
+    "delivery_service": "no"
+  },
+  {
+    "food_id": "17",
+    "stall_name": "Mamak",
+    "item_name": "Roti boom",
+    "price": "2.2",
+    "delivery_service": "no"
+  },
+  {
+    "food_id": "18",
+    "stall_name": "Mamak",
+    "item_name": "Roti planta",
+    "price": "2.2",
+    "delivery_service": "no"
+  },
+  {
+    "food_id": "19",
+    "stall_name": "Mamak",
+    "item_name": "Roti susu",
+    "price": "2.2",
+    "delivery_service": "no"
+  },
+  {
+    "food_id": "20",
+    "stall_name": "Mamak",
+    "item_name": "Roti tisu",
+    "price": "3.2",
+    "delivery_service": "no"
+  },
+  {
+    "food_id": "21",
+    "stall_name": "Mamak",
+    "item_name": "Tosai",
+    "price": "1.2",
+    "delivery_service": "no"
+  },
+  {
+    "food_id": "22",
+    "stall_name": "Mamak",
+    "item_name": "Mee goreng",
+    "price": "5",
+    "delivery_service": "yes"
+  },
+  {
+    "food_id": "23",
+    "stall_name": "Mamak",
+    "item_name": "Maggi goreng",
+    "price": "5",
+    "delivery_service": "yes"
+  },
+  {
+    "food_id": "24",
+    "stall_name": "Mamak",
+    "item_name": "Maggi soup",
+    "price": "4",
+    "delivery_service": "yes"
+  },
+  {
+    "food_id": "25",
+    "stall_name": "Mamak",
+    "item_name": "Teh tarik ais",
+    "price": "2.2",
+    "delivery_service": "no"
+  },
+  {
+    "food_id": "26",
+    "stall_name": "Mamak",
+    "item_name": "The tarik panas",
+    "price": "1.8",
+    "delivery_service": "no"
+  },
+  {
+    "food_id": "27",
+    "stall_name": "Mamak",
+    "item_name": "Milo ais",
+    "price": "2.5",
+    "delivery_service": "no"
+  },
+  {
+    "food_id": "28",
+    "stall_name": "Mamak",
+    "item_name": "Milo panas",
+    "price": "2.2",
+    "delivery_service": "no"
+  },
+  {
+    "food_id": "29",
+    "stall_name": "Mamak",
+    "item_name": "Cincau",
+    "price": "2.5",
+    "delivery_service": "no"
+  },
+  {
+    "food_id": "30",
+    "stall_name": "Mamak",
+    "item_name": "Limau ais",
+    "price": "1.8",
+    "delivery_service": "no"
+  },
+  {
+    "food_id": "31",
+    "stall_name": "Mamak",
+    "item_name": "Limau panas",
+    "price": "1.5",
+    "delivery_service": "no"
+  },
+  {
+    "food_id": "32",
+    "stall_name": "Mamak",
+    "item_name": "Bandung ais",
+    "price": "2",
+    "delivery_service": "no"
+  },
+  {
+    "food_id": "33",
+    "stall_name": "Beverage",
+    "item_name": "Apple juice",
+    "price": "5",
+    "delivery_service": "no"
+  },
+  {
+    "food_id": "34",
+    "stall_name": "Beverage",
+    "item_name": "Orange juice",
+    "price": "5",
+    "delivery_service": "no"
+  },
+  {
+    "food_id": "35",
+    "stall_name": "Beverage",
+    "item_name": "Watermelon juice",
+    "price": "5",
+    "delivery_service": "no"
+  },
+  {
+    "food_id": "36",
+    "stall_name": "Beverage",
+    "item_name": "Cucumber juice",
+    "price": "5",
+    "delivery_service": "no"
+  },
+  {
+    "food_id": "37",
+    "stall_name": "Beverage",
+    "item_name": "Pineapple juice",
+    "price": "5",
+    "delivery_service": "no"
+  },
+  {
+    "food_id": "38",
+    "stall_name": "Beverage",
+    "item_name": "Carrot juice",
+    "price": "5",
+    "delivery_service": "no"
+  },
+  {
+    "food_id": "39",
+    "stall_name": "Beverage",
+    "item_name": "Espresso",
+    "price": "6",
+    "delivery_service": "yes"
+  },
+  {
+    "food_id": "40",
+    "stall_name": "Beverage",
+    "item_name": "Hot Americano",
+    "price": "7",
+    "delivery_service": "yes"
+  },
+  {
+    "food_id": "41",
+    "stall_name": "Beverage",
+    "item_name": "Iced Americano",
+    "price": "8",
+    "delivery_service": "yes"
+  },
+  {
+    "food_id": "42",
+    "stall_name": "Beverage",
+    "item_name": "Hot Latte",
+    "price": "9",
+    "delivery_service": "yes"
+  },
+  {
+    "food_id": "43",
+    "stall_name": "Beverage",
+    "item_name": "Iced Latte",
+    "price": "10",
+    "delivery_service": "yes"
+  },
+  {
+    "food_id": "44",
+    "stall_name": "Beverage",
+    "item_name": "Hot Cappuccino",
+    "price": "9",
+    "delivery_service": "yes"
+  },
+  {
+    "food_id": "45",
+    "stall_name": "Beverage",
+    "item_name": "Ice Cappuccino",
+    "price": "10",
+    "delivery_service": "yes"
+  },
+  {
+    "food_id": "46",
+    "stall_name": "Beverage",
+    "item_name": "Hot Mocha",
+    "price": "9",
+    "delivery_service": "yes"
+  },
+  {
+    "food_id": "47",
+    "stall_name": "Beverage",
+    "item_name": "Iced Mocha",
+    "price": "10",
+    "delivery_service": "yes"
+  },
+  {
+    "food_id": "48",
+    "stall_name": "Korean",
+    "item_name": "Tteok",
+    "price": "2",
+    "delivery_service": "yes"
+  },
+  {
+    "food_id": "49",
+    "stall_name": "Korean",
+    "item_name": "Kimchi",
+    "price": "4",
+    "delivery_service": "yes"
+  },
+  {
+    "food_id": "50",
+    "stall_name": "Korean",
+    "item_name": "Gimbap",
+    "price": "4.5",
+    "delivery_service": "yes"
+  },
+  {
+    "food_id": "51",
+    "stall_name": "Korean",
+    "item_name": "Tteokbokki",
+    "price": "5",
+    "delivery_service": "yes"
+  },
+  {
+    "food_id": "52",
+    "stall_name": "Korean",
+    "item_name": "Hobakjuk",
+    "price": "6",
+    "delivery_service": "yes"
+  },
+  {
+    "food_id": "53",
+    "stall_name": "Korean",
+    "item_name": "Ramyun",
+    "price": "6.5",
+    "delivery_service": "yes"
+  },
+  {
+    "food_id": "54",
+    "stall_name": "Korean",
+    "item_name": "Kimchi Fried Rice",
+    "price": "7",
+    "delivery_service": "yes"
+  },
+  {
+    "food_id": "55",
+    "stall_name": "Korean",
+    "item_name": "Bulgogi",
+    "price": "7",
+    "delivery_service": "yes"
+  },
+  {
+    "food_id": "56",
+    "stall_name": "Korean",
+    "item_name": "Jjajangmyeon",
+    "price": "7",
+    "delivery_service": "yes"
+  },
+  {
+    "food_id": "57",
+    "stall_name": "Korean",
+    "item_name": "Kongguksu",
+    "price": "7.5",
+    "delivery_service": "yes"
+  },
+  {
+    "food_id": "58",
+    "stall_name": "Korean",
+    "item_name": "Japchae",
+    "price": "8",
+    "delivery_service": "yes"
+  },
+  {
+    "food_id": "59",
+    "stall_name": "Korean",
+    "item_name": "Bulgogi with rice",
+    "price": "8",
+    "delivery_service": "yes"
+  },
+  {
+    "food_id": "60",
+    "stall_name": "Korean",
+    "item_name": "Naengmyeon",
+    "price": "8.5",
+    "delivery_service": "yes"
+  },
+  {
+    "food_id": "61",
+    "stall_name": "Korean",
+    "item_name": "Bibimbap",
+    "price": "9",
+    "delivery_service": "yes"
+  },
+  {
+    "food_id": "62",
+    "stall_name": "Korean",
+    "item_name": "Sundubu Jjigae",
+    "price": "10",
+    "delivery_service": "yes"
+  },
+  {
+    "food_id": "63",
+    "stall_name": "Japanese",
+    "item_name": "Miso Soup",
+    "price": "1.5",
+    "delivery_service": "yes"
+  },
+  {
+    "food_id": "64",
+    "stall_name": "Japanese",
+    "item_name": "Chawanmushi",
+    "price": "1.5",
+    "delivery_service": "yes"
+  },
+  {
+    "food_id": "65",
+    "stall_name": "Japanese",
+    "item_name": "Gyoza",
+    "price": "5",
+    "delivery_service": "yes"
+  },
+  {
+    "food_id": "66",
+    "stall_name": "Japanese",
+    "item_name": "Tempura",
+    "price": "5",
+    "delivery_service": "yes"
+  },
+  {
+    "food_id": "67",
+    "stall_name": "Japanese",
+    "item_name": "Tamagoyaki (Egg Roll)",
+    "price": "1.5",
+    "delivery_service": "yes"
+  },
+  {
+    "food_id": "68",
+    "stall_name": "Japanese",
+    "item_name": "Teriyaki Chicken Bento",
+    "price": "8",
+    "delivery_service": "yes"
+  },
+  {
+    "food_id": "69",
+    "stall_name": "Japanese",
+    "item_name": "Teriyaki Vegetable Bento",
+    "price": "6.5",
+    "delivery_service": "yes"
+  },
+  {
+    "food_id": "70",
+    "stall_name": "Japanese",
+    "item_name": "Seafood Bento",
+    "price": "9",
+    "delivery_service": "yes"
+  },
+  {
+    "food_id": "71",
+    "stall_name": "Japanese",
+    "item_name": "Chicken Katsu Don",
+    "price": "8",
+    "delivery_service": "yes"
+  },
+  {
+    "food_id": "72",
+    "stall_name": "Japanese",
+    "item_name": "Tempura Soba",
+    "price": "7",
+    "delivery_service": "yes"
+  },
+  {
+    "food_id": "73",
+    "stall_name": "Japanese",
+    "item_name": "Chicken Yaki Soba",
+    "price": "7",
+    "delivery_service": "yes"
+  },
+  {
+    "food_id": "74",
+    "stall_name": "Japanese",
+    "item_name": "Vegetable Yaki Soba",
+    "price": "6",
+    "delivery_service": "yes"
+  },
+  {
+    "food_id": "75",
+    "stall_name": "Japanese",
+    "item_name": "Zaru Soba",
+    "price": "6",
+    "delivery_service": "yes"
+  },
+  {
+    "food_id": "76",
+    "stall_name": "Japanese",
+    "item_name": "Zaru Soba + Tempura",
+    "price": "7",
+    "delivery_service": "yes"
+  },
+  {
+    "food_id": "77",
+    "stall_name": "Japanese",
+    "item_name": "Tempura Udon",
+    "price": "7",
+    "delivery_service": "yes"
+  },
+  {
+    "food_id": "78",
+    "stall_name": "Japanese",
+    "item_name": "Chicken Yaki Udon",
+    "price": "7",
+    "delivery_service": "yes"
+  },
+  {
+    "food_id": "79",
+    "stall_name": "Japanese",
+    "item_name": "Vegetable Yaki Udon",
+    "price": "6",
+    "delivery_service": "yes"
+  },
+  {
+    "food_id": "80",
+    "stall_name": "Japanese",
+    "item_name": "Zaru Udon",
+    "price": "6",
+    "delivery_service": "yes"
+  },
+  {
+    "food_id": "81",
+    "stall_name": "Japanese",
+    "item_name": "Zaru Udon + Tempura",
+    "price": "7",
+    "delivery_service": "yes"
+  },
+  {
+    "food_id": "82",
+    "stall_name": "Japanese",
+    "item_name": "Chicken Teriyaki Lunch Set (Miso Soup)",
+    "price": "10",
+    "delivery_service": "yes"
+  },
+  {
+    "food_id": "83",
+    "stall_name": "Japanese",
+    "item_name": "Tempura Lunch Set (Miso Soup)",
+    "price": "9",
+    "delivery_service": "yes"
+  },
+  {
+    "food_id": "84",
+    "stall_name": "Japanese",
+    "item_name": "Vegetarian Lunch Set (Miso Soup)",
+    "price": "8",
+    "delivery_service": "yes"
+  },
+  {
+    "food_id": "85",
+    "stall_name": "Japanese",
+    "item_name": "Chicken Teriyaki Dinner Set (Chawanmushi)",
+    "price": "10",
+    "delivery_service": "yes"
+  },
+  {
+    "food_id": "86",
+    "stall_name": "Japanese",
+    "item_name": "Tempura Dinner Set (Chawanmushi)",
+    "price": "9",
+    "delivery_service": "yes"
+  },
+  {
+    "food_id": "87",
+    "stall_name": "Japanese",
+    "item_name": "Vegetarian Dinner Set (Chawanmushi)",
+    "price": "8",
+    "delivery_service": "yes"
+  }
+]

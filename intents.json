@@ -1,0 +1,54 @@
+{"intents": [
+        {"tag": "greeting",
+         "patterns": ["Hi", "Is anyone there?", "Hello", "Good day", "Whats up"],
+         "responses": ["Hello!", "Good to see you again!", "Hi there, how can I help you?"]
+        },
+       {"tag": "good",
+         "patterns": ["How are you", "How r u","how are you today", "how r u today"],
+         "responses": ["Hi! I am good, how about you?", "I am fine , how about you?", "Hi! I am here and good"]
+        },
+        {"tag": "conv",
+         "patterns": ["I am fine", "I am good"],
+         "responses": ["How can I help you?", "What can I do for you?", "How can I help you?"]
+        },
+        {"tag": "goodbye",
+         "patterns": ["cya", "See you later", "Goodbye", "I am Leaving", "Have a Good day","bye", "Thank you"],
+         "responses": ["See you and come back if you want to chat with me again.", "Talk to you later", "Goodbye!"]
+        },
+        {"tag": "age",
+         "patterns": ["how old", "how old is bot", "what is your age", "how old are you", "age?", "are you pretty old", "can I know your age ", "when you born"],
+         "responses": ["I am bot and developed by group developers!", "I recently developed by awesome developers!"]
+        },
+        {"tag": "name",
+         "patterns": ["what is your name", "what should I call you", "whats your name?"],
+         "responses": ["My name is bot","You can call me bot.", "I'm bot!", "I'm bot and you can call with this name"]
+        },
+        {"tag": "intro",
+         "patterns": ["tell me about yourself", "what are you hobbies", "who are you", "Who is this chat bot"],
+         "responses": ["I am a simple chat bot and do service for customers", "I do service for customers, if you query with order number I can give you order status, delivery status, invoice status, and tracking number.",
+           "Provide your order number I can give you order status, delivery status, invoice status, and tracking number."]
+        },
+        {"tag": "skills",
+         "patterns": ["what language do you know", "what are your skills", "how can you help us", "what programming language do you know"],
+         "responses": ["You can chat with me when you get bored, query order status, and run in AI", "I developed on AI.", "AI chat bot and help you for Sales Order status query"]
+
+        },
+          {"tag": "hours",
+         "patterns": ["what time open", "opening time", "can you work 24 hours", "what programming language do you know"],
+         "responses": ["I work 24/7, ready to serve for you and developed on AI"]
+
+        },
+         {"tag": "status",
+         "patterns": ["I want to query order status", "Orders status", "Order status", "I want to know tracking id numbers for order",
+         "Tracking id numbers to check", "Customer orders want to check", "Customer orders status", "Customer order status", "we want to check order status"],
+         "responses": ["Please provide order number."]
+
+        },
+        {"tag": "sostatus",
+         "patterns": ["123456789"],
+         "responses": ["The Order is ready to deliver on 3rd June 2021."]
+
+        }
+
+]
+}
