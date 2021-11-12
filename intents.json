@@ -1,6 +1,6 @@
 {"intents": [
         {"tag": "greeting",
-         "patterns": ["Hi", "Is anyone there?", "Hello", "Good day", "Whats up"],
+         "patterns": ["Hi", "Is anyone there?", "Hello", "Good day", "Whats up", "wassup","yo", "suuuup", "sup"],
          "responses": ["Hello!", "Good to see you again!", "Hi there, how can I help you?"]
         },
        {"tag": "good",
@@ -48,7 +48,48 @@
          "patterns": ["123456789"],
          "responses": ["The Order is ready to deliver on 3rd June 2021."]
 
-        }
+        },
+        {"tag": "delivery",
+         "patterns": ["I’d like to order for delivery"],
+         "responses": ["The Order is ready to deliver on 3rd June 2021."]
 
+        },
+        {"tag": "totalprice",
+         "patterns": ["123456789"],
+         "responses": ["The Order is ready to deliver on 3rd June 2021."]
+
+        },
+        {"tag": "review",
+         "patterns": ["Is it delicious?", "Did other customers like it?", "How’s the review for this dish?"],
+         "responses": ["The Order is ready to deliver on 3rd June 2021."]
+
+        },
+
+        {"tag": "recommendation",
+         "patterns": ["Is there any recommendations?", "I don;t know what to eat","I don't know what to order", "idk what I want","idk what to eat","idk what to order"],
+         "responses": ["The order is ready to deliver on 3rd June 2021"]
+
+        },
+
+        {"tag": "halal",
+         "patterns": ["Is this halal?"],
+         "responses": ["The Order is ready to deliver on 3rd June 2021."]
+
+        },
+        {"tag": "spicy",
+         "patterns": ["I want to eat something spicy", "I’d want something spicy", "Can I have smtg spicy?", "I would like to order some spicy dishes"],
+         "responses": ["The Order is ready to deliver on 3rd June 2021."]
+
+        },
+        {"tag": "sweet",
+         "patterns": ["I want smtg sweet", "I want something sweet"],
+         "responses": ["The Order is ready to deliver on 3rd June 2021."]
+
+        },
+        {"tag": "korean",
+         "patterns": ["123456789"],
+         "responses": ["The Order is ready to deliver on 3rd June 2021."]
+
+        }
 ]
 }
