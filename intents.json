@@ -38,12 +38,7 @@
          "responses": ["I work 24/7, ready to serve for you and developed on AI"]
 
         },
-         {"tag": "status",
-         "patterns": ["I want to query order status", "Orders status", "Order status", "I want to know tracking id numbers for order",
-         "Tracking id numbers to check", "Customer orders want to check", "Customer orders status", "Customer order status", "we want to check order status"],
-         "responses": ["Please provide order number."]
 
-        },
         {"tag": "delivery",
          "patterns": ["I’d like to order for delivery"],
          "responses": ["Sure, we have menu for delivery only"]
@@ -87,33 +82,33 @@
 
         },
         {"tag": "japanese",
-         "patterns": ["I want to eat some sushi", "I want seaweed"," I want to try japanese food","I am craving japanese","I want some salmon roll", "I want to eat ramen","i want to eat sushi now"],
+         "patterns": ["japanese","I want to eat some sushi", "I want seaweed"," I want to try japanese food","I am craving japanese","I want some salmon roll", "I want to eat ramen","i want to eat sushi now"],
          "responses": ["Ok. I will fetch a Japanese menu for u"]
 
         },
         {"tag": "mamak",
-         "patterns": ["I want to eat roti canai", "I want to eat indian","I want to eat Southern Asia food","i want to eat roti tissue","I wan to eat maggie goreng"],
+         "patterns": ["mamak","I want to eat roti canai", "I want to eat indian","I want to eat Southern Asia food","i want to eat roti tissue","I wan to eat maggie goreng"],
          "responses": ["Ok. I will fetch a Mamak menu for u"]
 
         },
          {"tag": "beverage",
-         "patterns": ["I want drink something", "I want a drink","I am thirsty","I want something to drink","I want water","I want a beverage"],
+         "patterns": ["beverage","I want drink something", "I want a drink","I am thirsty","I want something to drink","I want water","I want a beverage"],
          "responses": ["Ok. I will fetch a beverage menu for u"]
 
         },
          {"tag": "malay",
-         "patterns": ["I want to eat malay food", "give me some local malay cuisine","I want to try malay dishes","I want malay","let me get some malay food","lets try malay food"],
+         "patterns": ["malay","I want to eat malay food", "give me some local malay cuisine","I want to try malay dishes","I want malay","let me get some malay food","lets try malay food"],
          "responses": ["Ok. I will fetch a Malay menu for u"]
 
         },
         {"tag": "order",
          "patterns": ["I'd like to order ", "I want nasi lemak","I want this for dinner","I'd like to have this for lunch'","how to order"],
-         "responses": ["Ok. Please state the food id that u would like to order"]
+         "responses": ["Ok. What food would you like to order?"]
 
         },
 
         {"tag": "korean",
-         "patterns": ["I want to eat korean", "I am craving korean","I want to eat some spicy korean food","I would like to try korean cuisine","I want to eat fried chicken"],
+         "patterns": ["korean","I want to eat korean food", "I am craving korean food","I want to eat some spicy korean food","I would like to try korean cuisine","I want to eat fried chicken"],
          "responses": ["Ok. I will fetch a Korean menu for u"]
 
         }

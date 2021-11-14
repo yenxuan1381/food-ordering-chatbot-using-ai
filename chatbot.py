@@ -133,10 +133,12 @@ while True:
         # print_stall_menu(menu, 'Beverage')
         # print_stall_menu(menu, 'Malay')
 
-    if res == "Ok. What food would you like to order?":
-        id = 0
-        quit = False
-        while not quit:
-            food = input("Input food id: ")
-            shopping_cart = add_order(menu, food, shopping_cart)
-            quit = input("Would you like to order another food? 0: Yes, 1: No")
+
+    # order food failed
+    # if res == "Ok. What food would you like to order?":
+    #     id = 0
+    #     quit = False
+    #     while not quit:
+    #         food = input("Input food id: ")
+    #         shopping_cart = add_order(menu, food, shopping_cart)
+    #         quit = input("Would you like to order another food? 0: Yes, 1: No")
