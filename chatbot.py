@@ -4,11 +4,15 @@ import pickle
 import numpy as np
 import ast
 import pandas as pd
+import os
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 
 import nltk
 from nltk.stem import WordNetLemmatizer
 
 from tensorflow.keras.models import load_model
+
+
 
 lemmatizer = WordNetLemmatizer()
 intents = json.loads(open('intents.json').read())
@@ -53,6 +57,7 @@ def predict_class(sentence):
 def get_response(intents_list, intents_json):
     tag = intents_list[0]['intent']
     # print(tag)
+
     list_of_intents = intents_json['intents']
     for i in list_of_intents:
         # print(i['tag'])
@@ -80,10 +85,23 @@ def get_response(intents_list, intents_json):
 print("Hi! How can I help you")
 
 
-# while True:
+while True:
+    message = input("")
 
-# message = input("")
-# # print(message)
-# ints = predict_class(message)
-# res = get_response(ints, intents)
-# print(res)
+    ints = predict_class(message)
+    res = get_response(ints, intents)
+    print(res)
+
+    # print out the mamak menu when the user ask for it
+    if res == "Ok. I will fetch a Mamak menu for u":
+        for x in menu:
+            if x["stall_name"] == "Mamak":
+                print("Food ID:","".join(x["food_id"] ))
+                print("Stall name:","".join(x["stall_name"]))
+                print("Item name:","".join(x["item_name"]))
+                print("Price:","".join(x["price"]))
+                print("Delivery Service:","".join(x["delivery_service"]))
+                print("\n")
+
+
+
