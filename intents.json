@@ -66,7 +66,7 @@
         },
 
         {"tag": "recommendation",
-         "patterns": ["Is there any recommendations?", "I don;t know what to eat","I don't know what to order", "idk what I want","idk what to eat","idk what to order"],
+         "patterns": ["Is there any recommendations?", "I don't know what to eat","I don't know what to order", "idk what I want","idk what to eat","idk what to order"],
          "responses": ["The order is ready to deliver on 3rd June 2021"]
 
         },
@@ -86,10 +86,36 @@
          "responses": ["The Order is ready to deliver on 3rd June 2021."]
 
         },
+         {"tag": "stalls",
+         "patterns": ["What kind of stalls do you have?", "Wht kinda stalls u hav"],
+         "responses": ["We have 5 stores in total: Malay, Mamak, Korean, Japanese, Beverage. Which stall would you like to know more about?"]
+
+        },
+        {"tag": "japanese",
+         "patterns": ["I want smtg sweet", "I want something sweet"],
+         "responses": ["The Order is ready to deliver on 3rd June 2021."]
+
+        },
+        {"tag": "mamak",
+         "patterns": ["I want smtg sweet", "I want something sweet"],
+         "responses": ["The Order is ready to deliver on 3rd June 2021."]
+
+        },
+         {"tag": "beverage",
+         "patterns": ["I want smtg sweet", "I want something sweet"],
+         "responses": ["The Order is ready to deliver on 3rd June 2021."]
+
+        },
+         {"tag": "malay",
+         "patterns": ["I want smtg sweet", "I want something sweet"],
+         "responses": ["The Order is ready to deliver on 3rd June 2021."]
+
+        },
         {"tag": "korean",
          "patterns": ["123456789"],
          "responses": ["The Order is ready to deliver on 3rd June 2021."]
 
         }
+
 ]
 }
