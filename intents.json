@@ -51,7 +51,7 @@
         },
         {"tag": "delivery",
          "patterns": ["I’d like to order for delivery"],
-         "responses": ["The Order is ready to deliver on 3rd June 2021."]
+         "responses": ["Sure, we have menu for delivery only"]
 
         },
         {"tag": "totalprice",
