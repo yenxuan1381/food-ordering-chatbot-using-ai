@@ -44,11 +44,6 @@
          "responses": ["Please provide order number."]
 
         },
-        {"tag": "sostatus",
-         "patterns": ["123456789"],
-         "responses": ["The Order is ready to deliver on 3rd June 2021."]
-
-        },
         {"tag": "delivery",
          "patterns": ["I’d like to order for delivery"],
          "responses": ["Sure, we have menu for delivery only"]
@@ -86,9 +81,9 @@
          "responses": ["The Order is ready to deliver on 3rd June 2021."]
 
         },
-         {"tag": "stalls",
-         "patterns": ["What kind of stalls do you have?", "Wht kinda stalls u hav"],
-         "responses": ["We have 5 stores in total: Malay, Mamak, Korean, Japanese, Beverage. Which stall would you like to know more about?"]
+         {"tag": "menu",
+         "patterns": ["Menu","Menu pls","Can I have a look at the menu", "whats the menu", "What kind of stalls do you have?", "Wht kinda stalls u hav"],
+         "responses": ["We have 5 stalls in total: Malay, Mamak, Korean, Japanese, Beverage. Which stall would you like to know more about?"]
 
         },
         {"tag": "japanese",
@@ -111,6 +106,12 @@
          "responses": ["Ok. I will fetch a Malay menu for u"]
 
         },
+        {"tag": "order",
+         "patterns": ["I'd like to order ", "I want nasi lemak","I want this for dinner","I'd like to have this for lunch'","how to order"],
+         "responses": ["Ok. Please state the food id that u would like to order"]
+
+        },
+
         {"tag": "korean",
          "patterns": ["I want to eat korean", "I am craving korean","I want to eat some spicy korean food","I would like to try korean cuisine","I want to eat fried chicken"],
          "responses": ["Ok. I will fetch a Korean menu for u"]

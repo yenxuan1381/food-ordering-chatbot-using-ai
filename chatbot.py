@@ -74,13 +74,13 @@ def get_response(intents_list, intents_json):
 # def total_price(menu_json, stall_name):
 #     # TODO: return the total price
 
+
 def print_stall_menu(menu_json, stall, delivery):
-    # TODO: retrive the stall menu
 
     for x in menu_json:
 
         # prints menu for delivery and for the stall
-        if delivery == True:
+        if delivery:
             if x["stall_name"] == stall and x["delivery_service"] == 'yes':
                 print("Food ID:", "".join(x["food_id"]))
                 print("Stall name:", "".join(x["stall_name"]))
@@ -100,14 +100,14 @@ def print_stall_menu(menu_json, stall, delivery):
                 print("\n")
 
 
-def add_order(menu_json, order_id, shopping_cart):
+def add_order(menu_json, order_id, cart):
     input_dict = json.loads(menu_json)
     output_dict = [x for x in input_dict if x['food_id'] == order_id]
     res = json.dumps(output_dict)
 
-    shopping_cart.append(res)
+    cart.append(res)
 
-    return shopping_cart
+    return cart
 
 
 print("Hi! How can I help you")
@@ -132,3 +132,11 @@ while True:
         # print_stall_menu(menu, 'Korean')
         # print_stall_menu(menu, 'Beverage')
         # print_stall_menu(menu, 'Malay')
+
+    if res == "Ok. What food would you like to order?":
+        id = 0
+        quit = False
+        while not quit:
+            food = input("Input food id: ")
+            shopping_cart = add_order(menu, food, shopping_cart)
+            quit = input("Would you like to order another food? 0: Yes, 1: No")
