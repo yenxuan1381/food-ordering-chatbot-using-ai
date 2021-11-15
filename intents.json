@@ -40,7 +40,7 @@
         },
 
         {"tag": "delivery",
-         "patterns": ["I’d like to order for delivery"],
+         "patterns": ["I’d like to order for delivery","I want food delivery", "Can I get food delivery?","I am lazy to get food outside"],
          "responses": ["Sure, we have menu for delivery only"]
 
         },
@@ -102,7 +102,7 @@
 
         },
         {"tag": "order",
-         "patterns": ["I'd like to order ", "I want nasi lemak","I want this for dinner","I'd like to have this for lunch'","how to order"],
+         "patterns": ["I'd like to order ", "I want nasi lemak","I want this for dinner","I'd like to have this for lunch'","how to order","I wan to order food", "Order food"],
          "responses": ["Ok. What food would you like to order?"]
 
         },

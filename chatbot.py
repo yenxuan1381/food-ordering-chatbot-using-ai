@@ -74,13 +74,25 @@ def get_response(intents_list, intents_json):
 # def total_price(menu_json, stall_name):
 #     # TODO: return the total price
 
+def order_food(menu_json,id):
+
+    for x in menu_json:
+
+        if x["food_id"] == id:
+
+            print("Food ID:", "".join(x["food_id"]))
+            print("Item name:", "".join(x["item_name"]))
+            print("Price:", "".join(x["price"]))
+            return float(x["price"])
+
+
 
 def print_stall_menu(menu_json, stall, delivery):
 
     for x in menu_json:
 
         # prints menu for delivery and for the stall
-        if delivery:
+        if delivery == True:
             if x["stall_name"] == stall and x["delivery_service"] == 'yes':
                 print("Food ID:", "".join(x["food_id"]))
                 print("Stall name:", "".join(x["stall_name"]))
@@ -109,12 +121,13 @@ def add_order(menu_json, order_id, cart):
 
     return cart
 
-
+temp = True
+delivery_service = False
 print("Hi! How can I help you")
 
 while True:
     message = input("")
-    delivery_service = False
+
     shopping_cart = []
 
     ints = predict_class(message)
@@ -122,16 +135,32 @@ while True:
     print(res)
 
     if res == "Sure, we have menu for delivery only":
+        print('What do you want to order?')
         delivery_service = True
 
     # print out the mamak menu when the user ask for it
     if res == "Ok. I will fetch a Mamak menu for u":
         print_stall_menu(menu, 'Mamak', delivery_service)
 
-        # print_stall_menu(menu, 'Japanese')
-        # print_stall_menu(menu, 'Korean')
-        # print_stall_menu(menu, 'Beverage')
-        # print_stall_menu(menu, 'Malay')
+
+    # print_stall_menu(menu, 'Japanese')
+    if res == "Ok. I will fetch a Japanese menu for u":
+        print_stall_menu(menu, 'Japanese', delivery_service)
+
+
+    # print_stall_menu(menu, 'Korean')
+    if res == "Ok. I will fetch a Korean menu for u":
+        print_stall_menu(menu, 'Korean', delivery_service)
+
+
+    # print_stall_menu(menu, 'Beverage')
+    if res == "Ok. I will fetch a beverage menu for u":
+        print_stall_menu(menu, 'Beverage', delivery_service)
+
+
+    # print_stall_menu(menu, 'Malay')
+    if res == "Ok. I will fetch a Malay menu for u":
+        print_stall_menu(menu, 'Malay', delivery_service)
 
 
     # order food failed
@@ -142,3 +171,18 @@ while True:
     #         food = input("Input food id: ")
     #         shopping_cart = add_order(menu, food, shopping_cart)
     #         quit = input("Would you like to order another food? 0: Yes, 1: No")
+
+
+    if res == "Ok. What food would you like to order?":
+        totalprice =0.00
+        while temp:
+            print('Type the food id of the food that u want:')
+            id = input()
+            price = order_food(menu, id)
+            totalprice += price
+            print('The total price is ')
+            print(totalprice)
+
+
+
+
