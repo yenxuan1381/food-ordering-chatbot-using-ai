@@ -92,7 +92,7 @@ def print_stall_menu(menu_json, stall, delivery):
     for x in menu_json:
 
         # prints menu for delivery and for the stall
-        if delivery == True:
+        if delivery:
             if x["stall_name"] == stall and x["delivery_service"] == 'yes':
                 print("Food ID:", "".join(x["food_id"]))
                 print("Stall name:", "".join(x["stall_name"]))
@@ -121,7 +121,7 @@ def add_order(menu_json, order_id, cart):
 
     return cart
 
-temp = True
+
 delivery_service = False
 print("Hi! How can I help you")
 
@@ -174,14 +174,26 @@ while True:
 
 
     if res == "Ok. What food would you like to order?":
-        totalprice =0.00
+        total_price =0.00
+        temp = True
         while temp:
             print('Type the food id of the food that u want:')
-            id = input()
-            price = order_food(menu, id)
-            totalprice += price
-            print('The total price is ')
-            print(totalprice)
+            food_id = input()
+            price = order_food(menu, food_id)
+            total_price += price #Total price calculation here
+
+
+            print('Would you like to order anymore food? (1 = no)')
+            flag = input()
+
+            if flag == '1':
+                temp = False
+
+        print('Thanks for your order!')
+        print('The total price is ')
+        print(total_price)
+        #If you want to terminate the chatbot i think can do it here.
+
 
 
 

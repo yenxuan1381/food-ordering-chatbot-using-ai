@@ -1,6 +1,6 @@
 {"intents": [
         {"tag": "greeting",
-         "patterns": ["Hi", "Is anyone there?", "Hello", "Good day", "Whats up", "wassup","yo", "suuuup", "sup"],
+         "patterns": ["Hi", "Is anyone there?", "Hello", "Good day", "Whats up", "wassup","yo", "suuuup", "sup", "hey"],
          "responses": ["Hello!", "Good to see you again!", "Hi there, how can I help you?"]
         },
        {"tag": "good",
@@ -111,7 +111,11 @@
          "patterns": ["korean","I want to eat korean food", "I am craving korean food","I want to eat some spicy korean food","I would like to try korean cuisine","I want to eat fried chicken"],
          "responses": ["Ok. I will fetch a Korean menu for u"]
 
-        }
+        },
 
+        {"tag": "error",
+         "patterns": ["wdafwafawfawf", "ahshaf81421", "nmnmnmnmawdf2", "DFR321sQ", "sssssssssssssssssssS", "GA21R1RJCN","gawfhjawfiawjfwa9", "dmwem1431", "dw;afawf'a;'/"],
+         "responses": ["Are you okay?", "I'm sorry but i don't understand"]
+        }
 ]
 }
