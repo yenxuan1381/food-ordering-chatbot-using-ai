@@ -115,7 +115,7 @@
 
         {"tag": "error",
          "patterns": ["wdafwafawfawf", "ahshaf81421", "nmnmnmnmawdf2", "DFR321sQ", "sssssssssssssssssssS", "GA21R1RJCN","gawfhjawfiawjfwa9", "dmwem1431", "dw;afawf'a;'/"],
-         "responses": ["Are you okay?", "I'm sorry but i don't understand"]
+         "responses": ["Are you okay, why are you typing gibberish?", "I'm sorry but i don't understand"]
         }
 ]
 }
