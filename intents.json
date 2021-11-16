@@ -21,7 +21,7 @@
         },
         {"tag": "name",
          "patterns": ["what is your name", "what should I call you", "whats your name?"],
-         "responses": ["My name is bot","You can call me bot.", "I'm bot!", "I'm bot and you can call with this name"]
+         "responses": ["My name is Kayo the bot","You can call me Kayo the bot.", "I'm Kayo!", "I'm bot and you can call with Kayo"]
         },
         {"tag": "intro",
          "patterns": ["tell me about yourself", "what are you hobbies", "who are you", "Who is this chat bot"],
