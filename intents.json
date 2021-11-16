@@ -17,7 +17,7 @@
         },
         {"tag": "age",
          "patterns": ["how old", "how old is bot", "what is your age", "how old are you", "age?", "are you pretty old", "can I know your age ", "when you born"],
-         "responses": ["I am bot and developed by an awesome team DIDISUBMIT!", "I recently developed by the team DIDISUBMIT!"]
+         "responses": ["I am bot and developed in 2021 by an awesome team DIDISUBMIT!", "I recently developed in 2021 by the team DIDISUBMIT!"]
         },
         {"tag": "name",
          "patterns": ["what is your name", "what should I call you", "whats your name?"],
@@ -83,7 +83,7 @@
         },
 
         {"tag": "error",
-         "patterns": ["wdafwafawfawf", "ahshaf81421", "nmnmnmnmawdf2", "DFR321sQ", "sssssssssssssssssssS", "GA21R1RJCN","gawfhjawfiawjfwa9", "dmwem1431", "dw;afawf'a;'/", "sjdfoawepfoawnfn", "wieofniwoe9392"],
+         "patterns": ["dmwem1431", "dw;afawf'a;'/", "sjdfoawepfoawnfn", "wieofniwoe9392"],
          "responses": ["Are you okay, why are you typing gibberish?", "I'm sorry but i don't understand"]
         }
 ]

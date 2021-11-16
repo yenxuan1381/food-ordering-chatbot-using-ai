@@ -173,3 +173,6 @@ while True:
         print('The total price is ')
         print(total_price)
         # If you want to terminate the chatbot i think can do it here.
+
+    if res == "See you and come back if you want to chat with me again." or res == "Talk to you later" or res == "Goodbye!" :
+        exit(0)
