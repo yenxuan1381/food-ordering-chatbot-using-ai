@@ -74,21 +74,17 @@ def get_response(intents_list, intents_json):
 # def total_price(menu_json, stall_name):
 #     # TODO: return the total price
 
-def order_food(menu_json,id):
-
+def order_food(menu_json, id):
     for x in menu_json:
 
         if x["food_id"] == id:
-
             print("Food ID:", "".join(x["food_id"]))
             print("Item name:", "".join(x["item_name"]))
             print("Price:", "".join(x["price"]))
             return float(x["price"])
 
 
-
 def print_stall_menu(menu_json, stall, delivery):
-
     for x in menu_json:
 
         # prints menu for delivery and for the stall
@@ -142,46 +138,30 @@ while True:
     if res == "Ok. I will fetch a Mamak menu for u":
         print_stall_menu(menu, 'Mamak', delivery_service)
 
-
-    # print_stall_menu(menu, 'Japanese')
+    # print Japanese menu
     if res == "Ok. I will fetch a Japanese menu for u":
         print_stall_menu(menu, 'Japanese', delivery_service)
 
-
-    # print_stall_menu(menu, 'Korean')
+    # print Korean menu
     if res == "Ok. I will fetch a Korean menu for u":
         print_stall_menu(menu, 'Korean', delivery_service)
 
-
-    # print_stall_menu(menu, 'Beverage')
+    # print beverage menu
     if res == "Ok. I will fetch a beverage menu for u":
         print_stall_menu(menu, 'Beverage', delivery_service)
 
-
-    # print_stall_menu(menu, 'Malay')
+    # print Malay menu
     if res == "Ok. I will fetch a Malay menu for u":
         print_stall_menu(menu, 'Malay', delivery_service)
 
-
-    # order food failed
-    # if res == "Ok. What food would you like to order?":
-    #     id = 0
-    #     quit = False
-    #     while not quit:
-    #         food = input("Input food id: ")
-    #         shopping_cart = add_order(menu, food, shopping_cart)
-    #         quit = input("Would you like to order another food? 0: Yes, 1: No")
-
-
     if res == "Ok. What food would you like to order?":
-        total_price =0.00
+        total_price = 0.00
         temp = True
         while temp:
             print('Type the food id of the food that u want:')
             food_id = input()
             price = order_food(menu, food_id)
-            total_price += price #Total price calculation here
-
+            total_price += price  # Total price calculation here
 
             print('Would you like to order anymore food? (1 = no)')
             flag = input()
@@ -192,9 +172,4 @@ while True:
         print('Thanks for your order!')
         print('The total price is ')
         print(total_price)
-        #If you want to terminate the chatbot i think can do it here.
-
-
-
-
-
+        # If you want to terminate the chatbot i think can do it here.

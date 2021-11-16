@@ -17,7 +17,7 @@
         },
         {"tag": "age",
          "patterns": ["how old", "how old is bot", "what is your age", "how old are you", "age?", "are you pretty old", "can I know your age ", "when you born"],
-         "responses": ["I am bot and developed by group developers!", "I recently developed by awesome developers!"]
+         "responses": ["I am bot and developed by an awesome team DIDISUBMIT!", "I recently developed by the team DIDISUBMIT!"]
         },
         {"tag": "name",
          "patterns": ["what is your name", "what should I call you", "whats your name?"],
@@ -25,12 +25,11 @@
         },
         {"tag": "intro",
          "patterns": ["tell me about yourself", "what are you hobbies", "who are you", "Who is this chat bot"],
-         "responses": ["I am a simple chat bot and do service for customers", "I do service for customers, if you query with order number I can give you order status, delivery status, invoice status, and tracking number.",
-           "Provide your order number I can give you order status, delivery status, invoice status, and tracking number."]
+         "responses": ["I am a simple chat bot and do food ordering services for customers", "I order food for customers, provide me with the order number and I will order the food for you."]
         },
         {"tag": "skills",
          "patterns": ["what language do you know", "what are your skills", "how can you help us", "what programming language do you know"],
-         "responses": ["You can chat with me when you get bored, query order status, and run in AI", "I developed on AI.", "AI chat bot and help you for Sales Order status query"]
+         "responses": ["You can chat with me when you get bored, I run in AI", "I developed on AI.", "AI chat bot and help you order food"]
 
         },
           {"tag": "hours",
@@ -44,38 +43,8 @@
          "responses": ["Sure, we have menu for delivery only"]
 
         },
-        {"tag": "totalprice",
-         "patterns": ["123456789"],
-         "responses": ["The Order is ready to deliver on 3rd June 2021."]
 
-        },
-        {"tag": "review",
-         "patterns": ["Is it delicious?", "Did other customers like it?", "How’s the review for this dish?"],
-         "responses": ["The Order is ready to deliver on 3rd June 2021."]
 
-        },
-
-        {"tag": "recommendation",
-         "patterns": ["Is there any recommendations?", "I don't know what to eat","I don't know what to order", "idk what I want","idk what to eat","idk what to order"],
-         "responses": ["The order is ready to deliver on 3rd June 2021"]
-
-        },
-
-        {"tag": "halal",
-         "patterns": ["Is this halal?"],
-         "responses": ["The Order is ready to deliver on 3rd June 2021."]
-
-        },
-        {"tag": "spicy",
-         "patterns": ["I want to eat something spicy", "I’d want something spicy", "Can I have smtg spicy?", "I would like to order some spicy dishes"],
-         "responses": ["The Order is ready to deliver on 3rd June 2021."]
-
-        },
-        {"tag": "sweet",
-         "patterns": ["I want smtg sweet", "I want something sweet"],
-         "responses": ["The Order is ready to deliver on 3rd June 2021."]
-
-        },
          {"tag": "menu",
          "patterns": ["Menu","Menu pls","Can I have a look at the menu", "whats the menu", "What kind of stalls do you have?", "Wht kinda stalls u hav"],
          "responses": ["We have 5 stalls in total: Malay, Mamak, Korean, Japanese, Beverage. Which stall would you like to know more about?"]
@@ -114,7 +83,7 @@
         },
 
         {"tag": "error",
-         "patterns": ["wdafwafawfawf", "ahshaf81421", "nmnmnmnmawdf2", "DFR321sQ", "sssssssssssssssssssS", "GA21R1RJCN","gawfhjawfiawjfwa9", "dmwem1431", "dw;afawf'a;'/"],
+         "patterns": ["wdafwafawfawf", "ahshaf81421", "nmnmnmnmawdf2", "DFR321sQ", "sssssssssssssssssssS", "GA21R1RJCN","gawfhjawfiawjfwa9", "dmwem1431", "dw;afawf'a;'/", "sjdfoawepfoawnfn", "wieofniwoe9392"],
          "responses": ["Are you okay, why are you typing gibberish?", "I'm sorry but i don't understand"]
         }
 ]
