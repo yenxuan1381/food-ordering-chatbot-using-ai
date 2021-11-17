@@ -1,5 +1,5 @@
 # DIDISUBMIT
-Python Chatbox
+**Kayo The Bot**
+An AI chatbot written using python.
 
-Reference: Food Ordering Chatbot
-https://github.com/myselfHimanshu/food-ordering-chatbot
+
