@@ -2,8 +2,7 @@ import random
 import json
 import pickle
 import numpy as np
-import ast
-import pandas as pd
+import telebot
 import os
 
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
@@ -21,8 +20,6 @@ words = pickle.load(open('words.pkl', 'rb'))
 labels = pickle.load(open('labels.pkl', 'rb'))
 model = load_model('chatbot_model.h5')
 
-
-# print(labels)
 
 def clean_up_sentence(sentence):
     sentence_words = nltk.word_tokenize(sentence)
@@ -59,20 +56,16 @@ def predict_class(sentence):
 
 def get_response(intents_list, intents_json):
     tag = intents_list[0]['intent']
-    # print(tag)
 
     list_of_intents = intents_json['intents']
     for i in list_of_intents:
-        # print(i['tag'])
+
         if i['tag'] == tag:
             result = random.choice(i['responses'])
-            # print(result)
+
             break
     return result
 
-
-# def total_price(menu_json, stall_name):
-#     # TODO: return the total price
 
 def order_food(menu_json, id):
     for x in menu_json:
@@ -90,6 +83,7 @@ def print_stall_menu(menu_json, stall, delivery):
         # prints menu for delivery and for the stall
         if delivery:
             if x["stall_name"] == stall and x["delivery_service"] == 'yes':
+
                 print("Food ID:", "".join(x["food_id"]))
                 print("Stall name:", "".join(x["stall_name"]))
                 print("Item name:", "".join(x["item_name"]))
@@ -118,61 +112,134 @@ def add_order(menu_json, order_id, cart):
     return cart
 
 
-delivery_service = False
-print("Hi! How can I help you")
+# API_KEY = os.getenv('API_KEY')
+bot = telebot.TeleBot('2129062414:AAE4c6pa44_p0t2BQTDDRuDkr6xd_do8GWo')
 
-while True:
-    message = input("")
 
-    shopping_cart = []
+@bot.message_handler(commands=['start'])
+def start(message):
+    bot.send_message(message.chat.id, "Hi! How can I help you? Would recommend you to start viewing the menu first.")
+
+# @bot.message_handler(commands=['order'])
+# def start(message):
+#     bot.send_message(message.chat.id, "Hi! How can I help you? Would recommend you to start viewing the menu first.")
+#
+#
+#
+#     while temp:
+#         bot.send_message(message.chat.id, 'Type the food id of the food that u want:')
+#         food_id = input()
+#         price = order_food(menu, food_id)
+#         total_price += price  # Total price calculation here
+#
+#         print('Would you like to order anymore food? (1 = no)')
+#         flag = input()
+#
+#         if flag == '1':
+#             temp = False
+#
+#     print('Thanks for your order!')
+#     print('The total price is ')
+#     print(total_price)
+
+
+# shopping_cart_price = 0.00
+
+
+@bot.message_handler(func=lambda m: True)
+def ordering_process(message):
+    delivery_service = False
+    isOrder = False
+
+    msg = message
+    message = message.text
 
     ints = predict_class(message)
     res = get_response(ints, intents)
-    print(res)
+    # print(res)
+    bot.send_message(msg.chat.id, res)
 
     if res == "Sure, we have menu for delivery only":
-        print('What do you want to order?')
         delivery_service = True
 
     # print out the mamak menu when the user ask for it
     if res == "Ok. I will fetch a Mamak menu for u":
-        print_stall_menu(menu, 'Mamak', delivery_service)
+
+        if delivery_service:
+            mamak_delivery_menu = open('menu_folder/mamakmenudelivery.pdf', 'rb')
+            bot.send_document(msg.chat.id, mamak_delivery_menu)
+        else:
+            mamak_menu = open('menu_folder/mamakmenu.pdf', 'rb')
+            bot.send_document(msg.chat.id, mamak_menu)
 
     # print Japanese menu
     if res == "Ok. I will fetch a Japanese menu for u":
-        print_stall_menu(menu, 'Japanese', delivery_service)
+        if delivery_service:
+            japanese_delivery_menu = open('menu_folder/japanesemenudelivery.pdf', 'rb')
+            bot.send_document(msg.chat.id, japanese_delivery_menu)
+        else:
+            japanese_menu = open('menu_folder/japanesemenu.pdf', 'rb')
+            bot.send_document(msg.chat.id, japanese_menu)
 
     # print Korean menu
     if res == "Ok. I will fetch a Korean menu for u":
-        print_stall_menu(menu, 'Korean', delivery_service)
+        if delivery_service:
+            korean_delivery_menu = open('menu_folder/koreanmenudelivery.pdf', 'rb')
+            bot.send_document(msg.chat.id, korean_delivery_menu)
+        else:
+            korean_menu = open('menu_folder/koreanmenu.pdf', 'rb')
+            bot.send_document(msg.chat.id, korean_menu)
 
     # print beverage menu
     if res == "Ok. I will fetch a beverage menu for u":
-        print_stall_menu(menu, 'Beverage', delivery_service)
+        if delivery_service:
+            beverage_delivery_menu = open('menu_folder/beveragemenudelivery.pdf', 'rb')
+            bot.send_document(msg.chat.id, beverage_delivery_menu)
+        else:
+            beverage_menu = open('menu_folder/beveragemenu.pdf', 'rb')
+            bot.send_document(msg.chat.id, beverage_menu)
 
     # print Malay menu
     if res == "Ok. I will fetch a Malay menu for u":
-        print_stall_menu(menu, 'Malay', delivery_service)
+        if delivery_service:
+            malay_delivery_menu = open('menu_folder/malaymenudelivery.pdf', 'rb')
+            bot.send_document(msg.chat.id, malay_delivery_menu)
+        else:
+            malay_menu = open('menu_folder/malaymenu.pdf', 'rb')
+            bot.send_document(msg.chat.id, malay_menu)
 
     if res == "Ok. What food would you like to order?":
-        total_price = 0.00
-        temp = True
-        while temp:
-            print('Type the food id of the food that u want:')
-            food_id = input()
-            price = order_food(menu, food_id)
-            total_price += price  # Total price calculation here
+        isOrder = True
 
-            print('Would you like to order anymore food? (1 = no)')
-            flag = input()
+    # Ordering Process
 
-            if flag == '1':
-                temp = False
+    if isOrder:
+        food_id = int(message.text)
+        price = order_food(menu, food_id)
 
-        print('Thanks for your order!')
-        print('The total price is ')
-        print(total_price)
-        # If you want to terminate the chatbot i think can do it here.
+        total_price += price  # Total price calculation here
 
-    if res == "See you and come back if you want to chat with me again." or res == "Talk to you later" or res == "Goodbye!" :
+    # if res == "Ok. What food would you like to order?":
+    #     total_price = 0.00
+    #     temp = True
+    #     while temp:
+    #         print('Type the food id of the food that u want:')
+    #         food_id = input()
+    #         price = order_food(menu, food_id)
+    #         total_price += price  # Total price calculation here
+    #
+    #         print('Would you like to order anymore food? (1 = no)')
+    #         flag = input()
+    #
+    #         if flag == '1':
+    #             temp = False
+    #
+    #     print('Thanks for your order!')
+    #     print('The total price is ')
+    #     print(total_price)
+
+    if res == "See you and come back if you want to chat with me again." or res == "Talk to you later" or res == "Goodbye!":
         exit(0)
+
+
+bot.infinity_polling()

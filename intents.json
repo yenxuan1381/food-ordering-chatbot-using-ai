@@ -12,11 +12,11 @@
          "responses": ["How can I help you?", "What can I do for you?", "How can I help you?"]
         },
         {"tag": "goodbye",
-         "patterns": ["cya", "See you later", "Goodbye", "I am Leaving", "Have a Good day","bye", "Thank you"],
+         "patterns": ["cya", "See you later", "Goodbye", "I am Leaving", "Have a Good day","Bye", "Thank you", "Bye bye", "Byeeeeee"],
          "responses": ["See you and come back if you want to chat with me again.", "Talk to you later", "Goodbye!"]
         },
         {"tag": "age",
-         "patterns": ["how old", "how old is bot", "what is your age", "how old are you", "age?", "are you pretty old", "can I know your age ", "when you born"],
+         "patterns": ["how old", "how old r u", "how old is bot", "what is your age", "how old are you", "age?", "are you pretty old", "can I know your age ", "when you born"],
          "responses": ["I am bot and developed in 2021 by an awesome team DIDISUBMIT!", "I recently developed in 2021 by the team DIDISUBMIT!"]
         },
         {"tag": "name",
@@ -24,16 +24,16 @@
          "responses": ["My name is Kayo the bot","You can call me Kayo the bot.", "I'm Kayo!", "I'm bot and you can call with Kayo"]
         },
         {"tag": "intro",
-         "patterns": ["tell me about yourself", "what are you hobbies", "who are you", "Who is this chat bot"],
+         "patterns": ["tell me about yourself", "what are you hobbies", "who are you", "Who is this chat bot", "What do u do", "What do you normally do", "What can u do"],
          "responses": ["I am a simple chat bot and do food ordering services for customers", "I order food for customers, provide me with the order number and I will order the food for you."]
         },
         {"tag": "skills",
-         "patterns": ["what language do you know", "what are your skills", "how can you help us", "what programming language do you know"],
-         "responses": ["You can chat with me when you get bored, I run in AI", "I developed on AI.", "AI chat bot and help you order food"]
+         "patterns": ["what language do you know", "what are your skills", "how can you help us", "what programming language do you know", "What r u good at"],
+         "responses": ["You can order food chat with me when you get bored, I run in AI", "I am a bot developed on AI that helps customer to order food.", "AI chat bot and help you order food"]
 
         },
           {"tag": "hours",
-         "patterns": ["what time open", "opening time", "can you work 24 hours", "what programming language do you know"],
+         "patterns": ["what time open", "opening time", "can you work 24 hours", "How long do u operate", "What's ur operating hours"],
          "responses": ["I work 24/7, ready to serve for you and developed on AI"]
 
         },

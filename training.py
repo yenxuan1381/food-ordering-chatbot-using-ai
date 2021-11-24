@@ -1,4 +1,3 @@
-
 import json
 import random
 import pickle
@@ -36,8 +35,6 @@ words = [lemmatizer.lemmatize(w.lower()) for w in words if w not in ignore]  # e
 words = sorted(list(set(words)))
 
 labels = sorted(list(set(labels)))
-
-
 
 pickle.dump(words, open('words.pkl', 'wb'))
 pickle.dump(labels, open('labels.pkl', 'wb'))
