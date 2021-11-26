@@ -72,7 +72,7 @@
         },
         {"tag": "order",
          "patterns": ["I'd like to order ", "I want nasi lemak","I want this for dinner","I'd like to have this for lunch'","how to order","I wan to order food", "Order food"],
-         "responses": ["Ok. What food would you like to order?"]
+         "responses": ["Ok. Please type the food id of the food you would like to order."]
 
         },
 

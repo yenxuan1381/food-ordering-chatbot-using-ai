@@ -1,6 +1,8 @@
 import random
 import json
 import pickle
+
+
 import numpy as np
 import telebot
 import os
@@ -20,6 +22,9 @@ words = pickle.load(open('words.pkl', 'rb'))
 labels = pickle.load(open('labels.pkl', 'rb'))
 model = load_model('chatbot_model.h5')
 
+
+isOrder = False
+total_price = 0.00
 
 def clean_up_sentence(sentence):
     sentence_words = nltk.word_tokenize(sentence)
@@ -149,75 +154,98 @@ def start(message):
 @bot.message_handler(func=lambda m: True)
 def ordering_process(message):
     delivery_service = False
-    isOrder = False
+    global isOrder
+    global total_price
 
     msg = message
-    message = message.text
-
-    ints = predict_class(message)
-    res = get_response(ints, intents)
-    # print(res)
-    bot.send_message(msg.chat.id, res)
-
-    if res == "Sure, we have menu for delivery only":
-        delivery_service = True
-
-    # print out the mamak menu when the user ask for it
-    if res == "Ok. I will fetch a Mamak menu for u":
-
-        if delivery_service:
-            mamak_delivery_menu = open('menu_folder/mamakmenudelivery.pdf', 'rb')
-            bot.send_document(msg.chat.id, mamak_delivery_menu)
-        else:
-            mamak_menu = open('menu_folder/mamakmenu.pdf', 'rb')
-            bot.send_document(msg.chat.id, mamak_menu)
-
-    # print Japanese menu
-    if res == "Ok. I will fetch a Japanese menu for u":
-        if delivery_service:
-            japanese_delivery_menu = open('menu_folder/japanesemenudelivery.pdf', 'rb')
-            bot.send_document(msg.chat.id, japanese_delivery_menu)
-        else:
-            japanese_menu = open('menu_folder/japanesemenu.pdf', 'rb')
-            bot.send_document(msg.chat.id, japanese_menu)
-
-    # print Korean menu
-    if res == "Ok. I will fetch a Korean menu for u":
-        if delivery_service:
-            korean_delivery_menu = open('menu_folder/koreanmenudelivery.pdf', 'rb')
-            bot.send_document(msg.chat.id, korean_delivery_menu)
-        else:
-            korean_menu = open('menu_folder/koreanmenu.pdf', 'rb')
-            bot.send_document(msg.chat.id, korean_menu)
-
-    # print beverage menu
-    if res == "Ok. I will fetch a beverage menu for u":
-        if delivery_service:
-            beverage_delivery_menu = open('menu_folder/beveragemenudelivery.pdf', 'rb')
-            bot.send_document(msg.chat.id, beverage_delivery_menu)
-        else:
-            beverage_menu = open('menu_folder/beveragemenu.pdf', 'rb')
-            bot.send_document(msg.chat.id, beverage_menu)
-
-    # print Malay menu
-    if res == "Ok. I will fetch a Malay menu for u":
-        if delivery_service:
-            malay_delivery_menu = open('menu_folder/malaymenudelivery.pdf', 'rb')
-            bot.send_document(msg.chat.id, malay_delivery_menu)
-        else:
-            malay_menu = open('menu_folder/malaymenu.pdf', 'rb')
-            bot.send_document(msg.chat.id, malay_menu)
-
-    if res == "Ok. What food would you like to order?":
-        isOrder = True
-
-    # Ordering Process
+    msg2 = message.text
 
     if isOrder:
-        food_id = int(message.text)
-        price = order_food(menu, food_id)
+        food_id = message.text
+        bot.send_message(msg.chat.id, food_id)
+        if food_id.isnumeric():
 
-        total_price += price  # Total price calculation here
+            price = order_food(menu, food_id)
+
+            total_price += price  # Total price calculation here
+
+            bot.send_message(msg.chat.id, "Total Price: " +str(total_price))
+
+        else:
+            bot.send_message(msg.chat.id, "You did not enter an integer")
+
+        isOrder=False
+    else:
+        ints = predict_class(msg2)
+        res = get_response(ints, intents)
+        # print(res)
+        bot.send_message(msg.chat.id, res)
+
+        if res == "Sure, we have menu for delivery only":
+            delivery_service = True
+        isOrder = False
+
+        # print out the mamak menu when the user ask for it
+        if res == "Ok. I will fetch a Mamak menu for u":
+
+            if delivery_service:
+                mamak_delivery_menu = open('menu_folder/mamakmenudelivery.pdf', 'rb')
+                bot.send_document(msg.chat.id, mamak_delivery_menu)
+            else:
+                mamak_menu = open('menu_folder/mamakmenu.pdf', 'rb')
+                bot.send_document(msg.chat.id, mamak_menu)
+
+            isOrder = False
+
+        # print Japanese menu
+        if res == "Ok. I will fetch a Japanese menu for u":
+            if delivery_service:
+                japanese_delivery_menu = open('menu_folder/japanesemenudelivery.pdf', 'rb')
+                bot.send_document(msg.chat.id, japanese_delivery_menu)
+            else:
+                japanese_menu = open('menu_folder/japanesemenu.pdf', 'rb')
+                bot.send_document(msg.chat.id, japanese_menu)
+
+            isOrder = False
+
+        # print Korean menu
+        if res == "Ok. I will fetch a Korean menu for u":
+            if delivery_service:
+                korean_delivery_menu = open('menu_folder/koreanmenudelivery.pdf', 'rb')
+                bot.send_document(msg.chat.id, korean_delivery_menu)
+            else:
+                korean_menu = open('menu_folder/koreanmenu.pdf', 'rb')
+                bot.send_document(msg.chat.id, korean_menu)
+
+            isOrder = False
+
+        # print beverage menu
+        if res == "Ok. I will fetch a beverage menu for u":
+            if delivery_service:
+                beverage_delivery_menu = open('menu_folder/beveragemenudelivery.pdf', 'rb')
+                bot.send_document(msg.chat.id, beverage_delivery_menu)
+            else:
+                beverage_menu = open('menu_folder/beveragemenu.pdf', 'rb')
+                bot.send_document(msg.chat.id, beverage_menu)
+
+            isOrder = False
+
+        # print Malay menu
+        if res == "Ok. I will fetch a Malay menu for u":
+            if delivery_service:
+                malay_delivery_menu = open('menu_folder/malaymenudelivery.pdf', 'rb')
+                bot.send_document(msg.chat.id, malay_delivery_menu)
+            else:
+                malay_menu = open('menu_folder/malaymenu.pdf', 'rb')
+                bot.send_document(msg.chat.id, malay_menu)
+
+            isOrder = False
+
+        if res == "Ok. Please type the food id of the food you would like to order.":
+            isOrder = True
+
+
+
 
     # if res == "Ok. What food would you like to order?":
     #     total_price = 0.00
@@ -238,8 +266,9 @@ def ordering_process(message):
     #     print('The total price is ')
     #     print(total_price)
 
-    if res == "See you and come back if you want to chat with me again." or res == "Talk to you later" or res == "Goodbye!":
-        exit(0)
+        if res == "See you and come back if you want to chat with me again." or res == "Talk to you later" or res == "Goodbye!":
+            total_price = 0
+            exit(0)
 
 
 bot.infinity_polling()
