@@ -8,5 +8,6 @@ Run these commands in the terminal:
 ```
 pip install pyTelegramBotAPI
 pip install tensorflow
+pip install nltk
 ```
 
