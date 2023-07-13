@@ -1,12 +1,13 @@
 # Kayo-The-Bot
 
-This repository contains the source code for a chatbot named Kayo. Kayo is designed to interact with users, provide menu options, and handle food orders.
+This repository contains the source code for a food ordering chatbot using AI named Kayo. Kayo is designed to intelligently interact with users, provide menu options, and handle food orders.
 
 ## Features
 
 - Natural Language Processing: Kayo uses NLTK and TensorFlow to understand and respond to user queries.
 - Menu Presentation: Kayo can present different menus to the user based on their requests.
 - Order Handling: Kayo can handle food orders, calculate total price, and manage the ordering process.
+- Telegram Integration: Kayo is connected to Telegram and uses it as the chat interface for interacting with users.
 
 ## Dependencies
 
@@ -18,6 +19,14 @@ This repository contains the source code for a chatbot named Kayo. Kayo is desig
 - json
 - pickle
 - os
+
+Run these commands in the termindal:
+
+```
+pip install pyTelegramBotAPI
+pip install tensorflow
+pip install nltk
+```
 
 ## Usage
 
@@ -38,8 +47,15 @@ This repository contains the source code for a chatbot named Kayo. Kayo is desig
 
 This bot uses the Telebot library and requires a valid Telegram bot token to function. Please replace the placeholder token in the main.py file with your own token.
 
+```
 bot = telebot.TeleBot('YOUR_TELEGRAM_BOT_TOKEN')
+```
 
+## Example Use
+
+This is a regular use case of using Kayo to order a food.
+
+![Example Screenshot](img/demo.jpeg)
 
 ## Contribution
 
