@@ -1,4 +1,4 @@
-# Kayo-The-Bot
+# Food Ordering Chatbot using Artificial Intelligence
 
 This repository contains the source code for a food ordering chatbot using AI named Kayo. Kayo is designed to intelligently interact with users, provide menu options, and handle food orders.
 
